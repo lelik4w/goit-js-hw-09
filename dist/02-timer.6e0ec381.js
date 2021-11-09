@@ -5223,7 +5223,8 @@ var fp = (0, _flatpickr.default)(dateTimePicker, options);
 var startTimer = function startTimer() {
   timerId = setInterval(function () {
     timeLeft -= 1000;
-    adjustTime(timeLeft); // timeLeftObj = convertMs(timeLeft);
+    adjustTime(timeLeft);
+    btnStart.setAttribute('disabled', true); // timeLeftObj = convertMs(timeLeft);
     // timer.days.innerHTML = addLeadingZero(String(convertMs(timeLeft).days));
     // timer.hours.innerHTML = addLeadingZero(String(convertMs(timeLeft).hours));
     // timer.minutes.innerHTML = addLeadingZero(String(convertMs(timeLeft).minutes));
@@ -5268,7 +5269,7 @@ var parent = module.bundle.parent;
 if ((!parent || !parent.isParcelRequire) && typeof WebSocket !== 'undefined') {
   var hostname = "" || location.hostname;
   var protocol = location.protocol === 'https:' ? 'wss' : 'ws';
-  var ws = new WebSocket(protocol + '://' + hostname + ':' + "63072" + '/');
+  var ws = new WebSocket(protocol + '://' + hostname + ':' + "53015" + '/');
 
   ws.onmessage = function (event) {
     checkedAssets = {};

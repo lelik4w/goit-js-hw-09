@@ -83,6 +83,7 @@ const startTimer = () => {
     timerId = setInterval(() => {
         timeLeft -= 1000;
         adjustTime(timeLeft);
+        btnStart.setAttribute('disabled', true);
         // timeLeftObj = convertMs(timeLeft);
         // timer.days.innerHTML = addLeadingZero(String(convertMs(timeLeft).days));
         // timer.hours.innerHTML = addLeadingZero(String(convertMs(timeLeft).hours));
