@@ -6,13 +6,6 @@ import 'flatpickr/dist/flatpickr.min.css';
 // all modules
 import Notiflix from 'notiflix';
 
-// one by one
-import { Notify } from 'notiflix/build/notiflix-notify-aio';
-import { Report } from 'notiflix/build/notiflix-report-aio';
-import { Confirm } from 'notiflix/build/notiflix-confirm-aio';
-import { Loading } from 'notiflix/build/notiflix-loading-aio';
-import { Block } from 'notiflix/build/notiflix-block-aio';
-
 const dateTimePicker = document.querySelector('#datetime-picker');
 const btnStart = document.querySelector('button[data-start]');
 const btnStop = document.querySelector('button[data-stop]');
@@ -80,10 +73,10 @@ btnStart.setAttribute('disabled', true);
 const fp = flatpickr(dateTimePicker, options);
 
 const startTimer = () => {
+    btnStart.setAttribute('disabled', true);
     timerId = setInterval(() => {
         timeLeft -= 1000;
         adjustTime(timeLeft);
-        btnStart.setAttribute('disabled', true);
         // timeLeftObj = convertMs(timeLeft);
         // timer.days.innerHTML = addLeadingZero(String(convertMs(timeLeft).days));
         // timer.hours.innerHTML = addLeadingZero(String(convertMs(timeLeft).hours));
